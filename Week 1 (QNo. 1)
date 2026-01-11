@@ -1,0 +1,14 @@
+** Give a Sorted Array And a Number x, Such Two Elements Of The Array Such That Their Sum Is x. EXPECTED TIME COMPLEXITY O(n).
+
+def find_pair (arr, x):
+  left = 0
+  right = len (arr) - 1
+  while left < right :
+    current_sum = arr[left] + arr[right]
+    if current_sum == x:
+      return arr[left], arr[right]
+    elif current_sum < x :
+      left += 1
+    else :
+      right -= 1
+    return None
